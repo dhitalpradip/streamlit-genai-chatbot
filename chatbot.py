@@ -8,11 +8,11 @@ load_dotenv()
 
 # streamlit page setup
 st.set_page_config(
-    page_title="Dhital's Chatbot",
+    page_title="The Rise Theory Chatbot",
     page_icon="🤖",
     layout="centered"
 )
-st.title("💬 Dhital's AI Chatbot")
+st.title("💬 The Rise Theory Chatbot")
 
 # initiate chat history
 if "chat_history" not in st.session_state:
@@ -30,7 +30,7 @@ llm = ChatGroq(
 )
 
 # input box
-user_prompt = st.chat_input("Ask Dhital's Chatbot...")
+user_prompt = st.chat_input("Ask me to generate a quote, a joke, or anything else you'd like!")
 
 if user_prompt:
     st.chat_message("user").markdown(user_prompt)
